@@ -78,7 +78,7 @@
   padding: 6rem 1.5rem;
   text-align: center;
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.82)),
+    linear-gradient(rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.66)),
     url('../assets/image1.png');
   background-size: cover;
   background-position: center 20%;
@@ -96,6 +96,7 @@
   letter-spacing: 0.4em;
   text-transform: uppercase;
   opacity: 0.7;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
 }
 
 .hero-title {
@@ -113,6 +114,7 @@
   max-width: 42rem;
   opacity: 0.8;
   font-size: 1rem;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
 }
 
 @media (min-width: 640px) {
@@ -125,12 +127,19 @@
   margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
+  width: 100%;
 }
 
 @media (min-width: 640px) {
   .hero-actions {
     flex-direction: row;
+    justify-content: space-between;
+    width: min(100%, 46rem);
+    /* pushes the two pills toward the edges, roughly over Morpheus's
+       outstretched hands in the hero photo */
+    margin-top: 3rem;
   }
 }
 
@@ -241,6 +250,41 @@
   opacity: 0.7;
 }
 
+/* ---------- reveal-on-scroll: cards "materialize" like compiling code ---------- */
+
+.reveal {
+  opacity: 0;
+}
+
+.reveal.in-view {
+  animation: materialize 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes materialize {
+  0% {
+    opacity: 0;
+    transform: translateY(28px) scale(0.97);
+    filter: blur(8px);
+  }
+  55% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.in-view {
+    opacity: 1;
+    animation: none;
+  }
+}
+
 /* ---------- CTA ---------- */
 
 .section-cta {
@@ -262,19 +306,22 @@
 .cta-media {
   display: flex;
   justify-content: center;
+  width: auto;
+  height: auto;
 }
 
 .cta-image {
   width: 100%;
-  max-width: 22rem;
   height: auto;
-  border: 1px solid var(--matrix-green-dim);
+  border: 0px solid var(--matrix-green-dim);
 }
 
 .cta-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  margin: auto;
   gap: 1.5rem;
 }
 

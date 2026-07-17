@@ -64,6 +64,34 @@ a {
   z-index: -1;
 }
 
+/* ---------- cursor spotlight: brightens the code trail under the pointer ---------- */
+
+.cursor-glow {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle 130px at var(--x, 50%) var(--y, 50%),
+    rgba(160, 255, 190, 0.6),
+    rgba(0, 255, 65, 0.22) 45%,
+    transparent 72%
+  );
+  mix-blend-mode: screen;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.cursor-glow.active {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .cursor-glow {
+    display: none;
+  }
+}
+
 /* ---------- CRT / scanlines overlay ---------- */
 
 .scanlines::before {
@@ -218,6 +246,69 @@ a {
   color: #fff;
 }
 
+.redpill,
+.bluepill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 3.25rem;
+  padding: 0;
+  border: none;
+  border-radius: 30px;
+  animation-duration: 2.4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.redpill {
+  background-color: rgba(255, 0, 0, 0.5);
+  color: #fff;
+  animation-name: pill-glow-red;
+}
+.redpill:hover {
+  background-color: rgba(255, 0, 0, 0.9);
+  color: black;
+}
+
+.bluepill {
+  background-color: rgba(0, 0, 255, 0.5);
+  color: #fff;
+  animation-name: pill-glow-blue;
+}
+
+.bluepill:hover {
+  background-color: rgba(0, 0, 255, 0.9);
+  color: black;
+}
+
+@keyframes pill-glow-red {
+  0%,
+  100% {
+    box-shadow: 0 0 6px rgba(255, 0, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.9);
+  }
+}
+
+@keyframes pill-glow-blue {
+  0%,
+  100% {
+    box-shadow: 0 0 6px rgba(60, 100, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(60, 100, 255, 0.9);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .redpill,
+  .bluepill {
+    animation: none;
+  }
+}
+
 /* ---------- utility layout ---------- */
 
 .hidden {
@@ -333,12 +424,12 @@ a {
 
 .rabbit-btn {
   margin-top: 2rem;
-  border: none;
   background: none;
   cursor: pointer;
   font-size: 3.75rem;
   color: #fff;
   transition: transform 0.2s;
+  border:none;
 }
 
 .rabbit-btn:hover {

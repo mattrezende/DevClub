@@ -11,6 +11,7 @@
   </head>
   <body class="scanlines">
     <canvas id="rain" class="matrix-canvas" aria-hidden="true"></canvas>
+    <div id="cursor-glow" class="cursor-glow" aria-hidden="true"></div>
 
     <header class="site-header">
       <span class="font-display logo">DEV<span class="logo-accent">_</span>CLUB</span>
@@ -32,30 +33,30 @@
         mercado de verdade.
       </p>
       <div class="hero-actions">
-        <a href="#cursos" class="btn">Conhecer cursos</a>
-        <a href="#contato" class="btn btn-ghost">Falar com a equipe</a>
+        <a href="#cursos" class="btn redpill">Fazer parte</a>
+        <a href="#contato" class="btn bluepill">Já sou aluno</a>
       </div>
     </section>
 
     <section id="cursos" class="section">
       <h2 class="font-display text-glow section-title">// Cursos</h2>
       <div class="grid grid-2">
-        <article class="card">
+        <article class="card reveal">
           <span class="card-code">01</span>
           <h3 class="card-title">Fundamentos da Programação</h3>
           <p class="card-copy">Lógica, algoritmos e a primeira dose de pílula vermelha. Do zero ao seu primeiro programa.</p>
         </article>
-        <article class="card">
+        <article class="card reveal">
           <span class="card-code">02</span>
           <h3 class="card-title">Desenvolvimento Web Full Stack</h3>
           <p class="card-copy">HTML, CSS, JavaScript, React e Node. Construa aplicações reais, de ponta a ponta.</p>
         </article>
-        <article class="card">
+        <article class="card reveal">
           <span class="card-code">03</span>
           <h3 class="card-title">Backend &amp; Arquitetura</h3>
           <p class="card-copy">APIs, bancos de dados, autenticação e infraestrutura. Sustente sistemas que não caem.</p>
         </article>
-        <article class="card">
+        <article class="card reveal">
           <span class="card-code">04</span>
           <h3 class="card-title">Carreira Dev</h3>
           <p class="card-copy">Portfólio, entrevistas e posicionamento no mercado. Saia da Matrix empregado.</p>
@@ -66,22 +67,22 @@
     <section id="metodo" class="section">
       <h2 class="font-display text-glow section-title">// Como funciona</h2>
       <div class="grid grid-4">
-        <div class="step">
+        <div class="step reveal">
           <span class="step-n">001</span>
           <h3 class="step-title">Você escolhe a pílula</h3>
           <p class="step-copy">Se matricula e assume o compromisso com o próprio código.</p>
         </div>
-        <div class="step">
+        <div class="step reveal">
           <span class="step-n">010</span>
           <h3 class="step-title">Você entra no túnel</h3>
           <p class="step-copy">Aulas práticas, mentorias e desafios reais toda semana.</p>
         </div>
-        <div class="step">
+        <div class="step reveal">
           <span class="step-n">011</span>
           <h3 class="step-title">Você constrói</h3>
           <p class="step-copy">Projetos de verdade para o portfólio, não só exercícios soltos.</p>
         </div>
-        <div class="step">
+        <div class="step reveal">
           <span class="step-n">100</span>
           <h3 class="step-title">Você desperta</h3>
           <p class="step-copy">Sai pronto pro mercado, com rede de contatos e domínio técnico.</p>
@@ -103,6 +104,7 @@
     <footer class="site-footer">© 2026 DevClub. Todos os bits reservados. Desenvolvido por Matheus Rezende Lopes.</footer>
 
     <script src="js/matrix-rain.js"></script>
+    <script src="js/cursor-glow.js"></script>
     <script src="js/home.js"></script>
   </body>
 </html>
