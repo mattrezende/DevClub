@@ -261,7 +261,6 @@ a {
   gap: 1.5rem;
   background: rgba(0, 0, 0, 0.65);
   backdrop-filter: blur(3px);
-  border: 1px solid var(--matrix-green-dim);
   padding: 2.5rem 2rem;
   border-radius: 4px;
 }
