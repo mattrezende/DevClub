@@ -8,7 +8,9 @@ const sequence = document.getElementById('sequence');
 const line1 = document.getElementById('line1');
 const line2 = document.getElementById('line2');
 const line3 = document.getElementById('line3');
-const rabbit = document.getElementById('rabbit');
+const terminalPanel = document.querySelector('.terminal-panel');
+
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 nameInput.addEventListener('input', () => {
   connectBtn.disabled = nameInput.value.trim().length === 0;
@@ -33,14 +35,33 @@ nameForm.addEventListener('submit', async (e) => {
 
   line3.classList.remove('hidden');
   await typeInto(line3, 'Siga o coelho branco.', { speed: 45, startDelay: 200 });
+  await wait(700);
+
+  enterSite(name);
+});
+
+async function enterSite(name) {
+  terminalPanel.classList.add('fade-out');
   await wait(500);
 
-  rabbit.classList.remove('hidden');
-  rabbit.classList.add('fade-in');
-  rabbit.focus();
+  if (!reduceMotion) {
+    const rabbit = document.createElement('div');
+    rabbit.className = 'rabbit-transit';
+    rabbit.setAttribute('aria-hidden', 'true');
 
-  rabbit.addEventListener('click', () => {
-    localStorage.setItem('devclub_visitor', name);
-    window.location.href = 'home.html';
-  });
-});
+    const shadow = document.createElement('div');
+    shadow.className = 'rabbit-shadow';
+    const flip = document.createElement('div');
+    flip.className = 'rabbit-flip';
+    const shape = document.createElement('div');
+    shape.className = 'rabbit-shape';
+    flip.appendChild(shape);
+    rabbit.append(shadow, flip);
+
+    document.body.appendChild(rabbit);
+    await new Promise((resolve) => rabbit.addEventListener('animationend', resolve, { once: true }));
+  }
+
+  localStorage.setItem('devclub_visitor', name);
+  window.location.href = 'home.html';
+}
