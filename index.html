@@ -12,32 +12,34 @@
     <canvas id="rain" class="matrix-canvas" aria-hidden="true"></canvas>
 
     <main class="intro-stage">
-      <!-- step 1: name prompt -->
-      <form id="name-form" class="name-form">
-        <p class="font-display text-glow prompt-line">&gt; Qual é o seu nome?</p>
-        <div class="name-field">
-          <span class="text-glow">&gt;</span>
-          <input
-            id="name-input"
-            autofocus
-            maxlength="24"
-            autocomplete="off"
-            placeholder="digite aqui"
-            class="name-input text-glow"
-          />
-          <span class="caret"></span>
-        </div>
-        <button type="submit" id="connect-btn" class="btn" disabled>Conectar</button>
-      </form>
+      <div class="terminal-panel">
+        <!-- step 1: name prompt -->
+        <form id="name-form" class="name-form">
+          <p class="font-display text-glow prompt-line">&gt; Qual é o seu nome?</p>
+          <div class="name-field">
+            <span class="text-glow">&gt;</span>
+            <input
+              id="name-input"
+              autofocus
+              maxlength="24"
+              autocomplete="off"
+              placeholder="digite aqui"
+              class="name-input text-glow"
+            />
+            <span class="caret"></span>
+          </div>
+          <button type="submit" id="connect-btn" class="btn" disabled>Conectar</button>
+        </form>
 
-      <!-- step 2: typed sequence -->
-      <div id="sequence" class="sequence hidden">
-        <p id="line1" class="font-display text-glow"></p>
-        <p id="line2" class="font-display text-glow hidden"></p>
-        <p id="line3" class="font-display text-glow hidden"></p>
-        <button id="rabbit" class="rabbit-btn rabbit-pulse hidden" aria-label="Seguir o coelho branco e entrar no site">
-          🐇
-        </button>
+        <!-- step 2: typed sequence -->
+        <div id="sequence" class="sequence hidden">
+          <p id="line1" class="font-display text-glow"></p>
+          <p id="line2" class="font-display text-glow hidden"></p>
+          <p id="line3" class="font-display text-glow hidden"></p>
+          <button id="rabbit" class="rabbit-btn rabbit-pulse hidden" aria-label="Seguir o coelho branco e entrar no site">
+            🐇
+          </button>
+        </div>
       </div>
     </main>
 

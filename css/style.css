@@ -11,16 +11,17 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
+html {
   background: #000;
-  color: var(--matrix-green);
-  overscroll-behavior: none;
 }
 
 body {
+  margin: 0;
+  padding: 0;
+  /* no background here: body painting its own opaque background would
+     paint on top of the fixed, negative-z-index rain canvas below */
+  color: var(--matrix-green);
+  overscroll-behavior: none;
   font-family: 'Share Tech Mono', ui-monospace, monospace;
   min-height: 100svh;
 }
@@ -251,8 +252,21 @@ a {
   text-align: center;
 }
 
+.terminal-panel {
+  width: fit-content;
+  max-width: min(92vw, 44rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(3px);
+  border: 1px solid var(--matrix-green-dim);
+  padding: 2.5rem 2rem;
+  border-radius: 4px;
+}
+
 .name-form {
-  width: 100%;
   max-width: 28rem;
   display: flex;
   flex-direction: column;
