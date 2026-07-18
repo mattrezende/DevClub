@@ -83,6 +83,7 @@
   background-size: cover;
   background-position: center 20%;
   background-repeat: no-repeat;
+  background-opacity: 0.8;
 }
 
 @media (min-width: 640px) {
