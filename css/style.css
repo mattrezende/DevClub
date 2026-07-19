@@ -474,6 +474,22 @@ a {
   opacity: 0;
 }
 
+/* ---------- full-screen fade-to-black transition ---------- */
+
+.fade-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  background: #000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease;
+}
+
+.fade-overlay.active {
+  opacity: 1;
+}
+
 .name-form {
   max-width: 28rem;
   display: flex;

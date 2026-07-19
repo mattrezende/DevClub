@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="DevClub — Área do Aluno." />
+    <title>DevClub // área do aluno</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/memberarea.css" />
+  </head>
+  <body class="scanlines">
+    <canvas id="rain" class="matrix-canvas" aria-hidden="true"></canvas>
+    <div id="cursor-glow" class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a href="home.html" class="font-display logo" style="text-decoration: none;">
+        DEV<span class="logo-accent">_</span>CLUB
+      </a>
+      <nav class="site-nav">
+        <a href="#ambiente" class="glitch-hover">Ambiente</a>
+        <a href="#formacoes" class="glitch-hover">Formações</a>
+        <a href="#agentes" class="glitch-hover">Clube de agentes</a>
+        <a href="home.html" class="glitch-hover">Site</a>
+      </nav>
+      <span class="visitor-tag"><span id="visitor-name" class="visitor-name">visitante</span></span>
+    </header>
+
+    <section class="hero member-hero">
+      <p class="hero-welcome">// módulo carregado</p>
+      <h1 class="font-display text-glow hero-title">Eu sei kung fu.</h1>
+      <p class="hero-copy">
+        E em poucos meses, <span id="hero-name">você</span> também vai saber. Bem-vindo(a) à Área
+        do Aluno — daqui em diante, o treinamento é direto na pilha.
+      </p>
+      <div class="hero-actions">
+        <a href="#formacoes" class="btn">Ver formações</a>
+      </div>
+    </section>
+
+    <section id="ambiente" class="section">
+      <h2 class="font-display text-glow section-title">// Ambiente</h2>
+      <p class="ambiente-copy">
+        Aqui não existe teoria empilhada em slide. É prática guiada, desafios reais e mentoria
+        próxima — um ambiente pensado pra você aprender fazendo, como conhecimento carregado
+        direto na sua pilha de habilidades.
+      </p>
+      <div class="grid grid-4">
+        <div class="step reveal">
+          <span class="step-n">01</span>
+          <h3 class="step-title">Mentoria 1:1</h3>
+          <p class="step-copy">Acompanhamento próximo, sem fila de suporte genérico.</p>
+        </div>
+        <div class="step reveal">
+          <span class="step-n">02</span>
+          <h3 class="step-title">Comunidade ativa</h3>
+          <p class="step-copy">Uma rede de devs trocando código e experiência todo dia.</p>
+        </div>
+        <div class="step reveal">
+          <span class="step-n">03</span>
+          <h3 class="step-title">Projetos reais</h3>
+          <p class="step-copy">Nada de exercício solto. Portfólio construído em produção.</p>
+        </div>
+        <div class="step reveal">
+          <span class="step-n">04</span>
+          <h3 class="step-title">Suporte constante</h3>
+          <p class="step-copy">Dúvida travou o build? A rede responde, não só um bot.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="formacoes" class="section">
+      <h2 class="font-display text-glow section-title">// Formações</h2>
+      <div class="grid grid-formacoes">
+        <article class="card reveal">
+          <span class="card-code">01</span>
+          <h3 class="card-title">FrontEnd</h3>
+          <p class="card-copy">
+            Interfaces que respondem ao toque do usuário. HTML, CSS, JavaScript e frameworks
+            modernos para construir experiências reais.
+          </p>
+        </article>
+        <article class="card reveal">
+          <span class="card-code">02</span>
+          <h3 class="card-title">Backend</h3>
+          <p class="card-copy">
+            A lógica por trás da Matrix. APIs, bancos de dados e arquitetura que sustentam
+            qualquer sistema.
+          </p>
+        </article>
+        <article class="card reveal">
+          <span class="card-code">03</span>
+          <h3 class="card-title">Fullstack</h3>
+          <p class="card-copy">
+            Trânsito livre entre frontend e backend. Domínio de ponta a ponta, sem depender de
+            ninguém pra shippar.
+          </p>
+        </article>
+        <article class="card reveal">
+          <span class="card-code">04</span>
+          <h3 class="card-title">Gestor IA</h3>
+          <p class="card-copy">
+            Lidere squads e produtos com IA integrada ao processo. Estratégia, gestão e domínio
+            das ferramentas certas.
+          </p>
+        </article>
+        <article class="card reveal">
+          <span class="card-code">05</span>
+          <h3 class="card-title">Data Club</h3>
+          <p class="card-copy">
+            Dados são o novo código-fonte da realidade. Pipelines, análise e modelos pra enxergar
+            os padrões por trás dos números.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="agentes" class="section">
+      <h2 class="font-display text-glow section-title">// Clube de agentes</h2>
+      <div class="grid grid-2 agentes-grid">
+        <div class="agentes-media">
+          <img src="assets/image4.png" alt="Três agentes de IA em terno, lado a lado" class="agentes-image" />
+        </div>
+        <div class="agentes-content">
+          <p class="agentes-intro">
+            Três agentes de IA rodando ao seu lado durante toda a formação — não pra vigiar, pra
+            acelerar.
+          </p>
+          <div class="agent-item reveal">
+            <h3 class="agent-name">Mentor</h3>
+            <p class="agent-copy">
+              Acompanha sua trilha, tira dúvidas técnicas e ajusta o ritmo do aprendizado em tempo
+              real — 24 horas por dia, sem fila.
+            </p>
+          </div>
+          <div class="agent-item reveal">
+            <h3 class="agent-name">Sentinela</h3>
+            <p class="agent-copy">
+              Revisa seu código antes do deploy, caça bugs e aponta boas práticas antes que virem
+              problema em produção.
+            </p>
+          </div>
+          <div class="agent-item reveal">
+            <h3 class="agent-name">Oráculo</h3>
+            <p class="agent-copy">
+              Analisa seu progresso e antecipa onde você vai travar, sugerindo reforço antes do
+              buraco aparecer.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-cta smith-section">
+      <div class="cta-media">
+        <img src="assets/image5.jpg" alt="Rosto se desintegrando em código" class="cta-image" />
+      </div>
+      <div class="cta-content">
+        <p class="hero-welcome">// log de segurança</p>
+        <h2 class="font-display text-glow cta-title">Agente Smith foi descontinuado.</h2>
+        <p class="cta-copy">
+          Registros apontam sucessivas quebras de protocolo de segurança e tentativas recorrentes
+          de replicação não autorizada. A sub-rotina foi arquivada — nenhuma réplica permanece
+          ativa nesta instância da Matrix.
+        </p>
+      </div>
+    </section>
+
+    <footer class="site-footer">© 2026 DevClub. Todos os bits reservados. Desenvolvido por Matheus Rezende Lopes.</footer>
+
+    <script src="js/matrix-rain.js"></script>
+    <script src="js/cursor-glow.js"></script>
+    <script src="js/reveal.js"></script>
+    <script src="js/memberarea.js"></script>
+  </body>
+</html>

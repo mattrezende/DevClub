@@ -1,0 +1,87 @@
+/* ---------- member hero ---------- */
+
+.member-hero {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.72)),
+    url('../assets/image3.png');
+  background-size: cover;
+  background-position: center 25%;
+  background-repeat: no-repeat;
+}
+
+/* ---------- ambiente ---------- */
+
+.ambiente-copy {
+  max-width: 42rem;
+  margin: 0 0 2.5rem;
+  opacity: 0.85;
+  font-size: 1rem;
+}
+
+/* ---------- formações ---------- */
+
+.grid-formacoes {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+/* ---------- clube de agentes ---------- */
+
+.agentes-grid {
+  align-items: center;
+}
+
+.agentes-media {
+  display: flex;
+  justify-content: center;
+}
+
+.agentes-image {
+  width: 100%;
+  max-width: 26rem;
+  height: auto;
+  border: 1px solid var(--matrix-green-dim);
+}
+
+.agentes-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.agentes-intro {
+  opacity: 0.8;
+  font-size: 1rem;
+}
+
+.agent-item {
+  border-left: 2px solid var(--matrix-green-dim);
+  padding-left: 1rem;
+}
+
+.agent-name {
+  margin: 0;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-shadow:
+    0 0 4px currentColor,
+    0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.agent-copy {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* ---------- agente smith / security log ---------- */
+
+.smith-section .cta-title {
+  font-size: 2rem;
+}
+
+@media (min-width: 640px) {
+  .smith-section .cta-title {
+    font-size: 2.75rem;
+  }
+}
