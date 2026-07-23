@@ -12,8 +12,6 @@ if (!name) {
   const line2 = document.getElementById('line2');
   const line3 = document.getElementById('line3');
   const line4 = document.getElementById('line4');
-  const line5 = document.getElementById('line5');
-  const line6 = document.getElementById('line6');
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -28,22 +26,14 @@ if (!name) {
     await wait(900);
 
     line3.classList.remove('hidden');
-    await typeInto(line3, 'Não posso dizer exatamente o ano, porque...', { speed: 45, startDelay: 200 });
-    await wait(700);
-
-    line4.classList.remove('hidden');
-    await typeInto(line4, 'sinceramente, eu não sei.', { speed: 45, startDelay: 200 });
-    await wait(900);
-
-    line5.classList.remove('hidden');
-    await typeInto(line5, `Nada que eu diga será uma explicação para você, ${name}.`, {
+    await typeInto(line3, `Nada que eu diga será uma explicação para você, ${name}.`, {
       speed: 45,
       startDelay: 200,
     });
     await wait(900);
 
-    line6.classList.remove('hidden');
-    await typeInto(line6, 'Veja por si mesmo.', { speed: 50, startDelay: 200 });
+    line4.classList.remove('hidden');
+    await typeInto(line4, 'Veja por si mesmo.', { speed: 50, startDelay: 200 });
     await wait(1000);
 
     await enterMemberArea();
